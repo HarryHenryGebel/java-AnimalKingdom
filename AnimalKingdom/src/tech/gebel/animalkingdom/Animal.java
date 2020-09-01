@@ -11,5 +11,14 @@ public abstract class Animal {
     this.yearNamed = yearNamed;
     this.name = name;
   }
+
+  public String toString() {
+    return String.format(
+      "Animals{id=%d, name=%s, yearNamed=%d}",
+      id,
+      name,
+      yearNamed
+    );
+  }
 }
 //  LocalWords:  yearNamed
