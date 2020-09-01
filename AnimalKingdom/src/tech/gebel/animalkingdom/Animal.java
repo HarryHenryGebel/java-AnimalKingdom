@@ -20,5 +20,17 @@ public abstract class Animal {
       yearNamed
     );
   }
+
+  public String reproduce() {
+    return reproductionType;
+  }
+
+  public String breath() {
+    return respirationType;
+  }
+
+  public String move() {
+    return movementType;
+  }
 }
 //  LocalWords:  yearNamed
