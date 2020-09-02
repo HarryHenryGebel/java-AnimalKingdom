@@ -20,5 +20,10 @@ public class Main {
     Fish salmon = new Fish(1758, "Salmon");
     Fish catfish = new Fish(1817, "Catfish");
     Fish perch = new Fish(1758, "Perch");
+
+    System.out.printf("%s%n", Animal.sortByYear(false));
+    System.out.printf("%s%n", Animal.sortByName(true));
+    System.out.printf("%s%n", Animal.sortByMovement(true));
+    System.out.printf("%s%n", Animal.filterByBreath("lungs"));
   }
 }

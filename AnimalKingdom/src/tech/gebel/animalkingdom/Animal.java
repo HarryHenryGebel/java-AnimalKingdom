@@ -46,5 +46,33 @@ public abstract class Animal {
     );
     return clone;
   }
+
+  public static ArrayList<Animal> sortByName(boolean ascending) {
+    ArrayList<Animal> clone = new ArrayList<Animal>(instances);
+    if (ascending) clone.sort(
+      (animal1, animal2) -> animal1.name.compareTo(animal2.name)
+    ); else clone.sort(
+      (animal1, animal2) -> animal2.name.compareTo(animal1.name)
+    );
+    return clone;
+  }
+
+  public static ArrayList<Animal> sortByMovement(boolean ascending) {
+    ArrayList<Animal> clone = new ArrayList<Animal>(instances);
+    if (ascending) clone.sort(
+      (animal1, animal2) -> animal1.movementType.compareTo(animal2.movementType)
+    ); else clone.sort(
+      (animal1, animal2) -> animal2.movementType.compareTo(animal1.movementType)
+    );
+    return clone;
+  }
+
+  public static ArrayList<Animal> filterByBreath(String respirationType) {
+    ArrayList<Animal> filter = new ArrayList<Animal>();
+    for (Animal animal : instances) if (
+      animal.respirationType.equals(respirationType)
+    ) filter.add(animal);
+    return filter;
+  }
 }
 //  LocalWords:  yearNamed
