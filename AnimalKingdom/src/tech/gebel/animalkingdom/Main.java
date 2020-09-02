@@ -10,5 +10,11 @@ public class Main {
     Mammal armadillo = new Mammal(1758, "Armadillo");
     Mammal racoon = new Mammal(1758, "Raccoon");
     Mammal bigfoot = new Mammal(2021, "Bigfoot");
+
+    Bird pigeon = new Bird(1837, "Pigeon");
+    Bird peacock = new Bird(1821, "Peacock");
+    Bird toucan = new Bird(1758, "Toucan");
+    Bird parrot = new Bird(1824, "Parrot");
+    Bird swan = new Bird(1758, "Swan");
   }
 }
