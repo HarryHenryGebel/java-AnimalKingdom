@@ -16,5 +16,9 @@ public class Main {
     Bird toucan = new Bird(1758, "Toucan");
     Bird parrot = new Bird(1824, "Parrot");
     Bird swan = new Bird(1758, "Swan");
+
+    Fish salmon = new Fish(1758, "Salmon");
+    Fish catfish = new Fish(1817, "Catfish");
+    Fish perch = new Fish(1758, "Perch");
   }
 }
