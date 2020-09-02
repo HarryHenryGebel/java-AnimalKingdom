@@ -18,7 +18,7 @@ public abstract class Animal {
 
   public String toString() {
     return String.format(
-      "Animals{id=%d, name=%s, yearNamed=%d}",
+      "Animals{id=%d, name=%s, yearNamed=%d}%n",
       id,
       name,
       yearNamed
@@ -35,6 +35,16 @@ public abstract class Animal {
 
   public String move() {
     return movementType;
+  }
+
+  public static ArrayList<Animal> sortByYear(boolean ascending) {
+    ArrayList<Animal> clone = new ArrayList<Animal>(instances);
+    if (ascending) clone.sort(
+      (animal1, animal2) -> animal1.yearNamed + animal2.yearNamed
+    ); else clone.sort(
+      (animal1, animal2) -> animal2.yearNamed - animal1.yearNamed
+    );
+    return clone;
   }
 }
 //  LocalWords:  yearNamed
