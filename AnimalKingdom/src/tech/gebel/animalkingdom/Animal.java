@@ -1,7 +1,10 @@
 package tech.gebel.animalkingdom;
 
+import java.util.ArrayList;
+
 public abstract class Animal {
   private static int maximumId = 0;
+  private static ArrayList<Animal> instances = new ArrayList<Animal>();
   protected int id, yearNamed;
   protected String name, reproductionType, respirationType, movementType;
 
@@ -10,6 +13,7 @@ public abstract class Animal {
     id = maximumId;
     this.yearNamed = yearNamed;
     this.name = name;
+    instances.add(this);
   }
 
   public String toString() {
