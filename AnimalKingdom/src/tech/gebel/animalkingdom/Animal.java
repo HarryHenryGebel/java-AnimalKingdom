@@ -74,5 +74,17 @@ public abstract class Animal {
     ) filter.add(animal);
     return filter;
   }
+
+  public static ArrayList<Animal> filterByBreathAndYear(
+    String respirationType,
+    int yearNamed
+  ) {
+    ArrayList<Animal> filter = new ArrayList<Animal>();
+    for (Animal animal : instances) if (
+      (animal.respirationType.equals(respirationType)) &&
+      (animal.yearNamed == yearNamed)
+    ) filter.add(animal);
+    return filter;
+  }
 }
 //  LocalWords:  yearNamed
