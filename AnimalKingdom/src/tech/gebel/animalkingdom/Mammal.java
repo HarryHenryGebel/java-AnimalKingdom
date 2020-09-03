@@ -8,5 +8,6 @@ public class Mammal extends Animal {
     reproductionType = "live births";
     respirationType = "lungs";
     movementType = "walk";
+    className = "Mammal";
   }
 }

@@ -8,5 +8,6 @@ public class Bird extends Animal {
     reproductionType = "eggs";
     respirationType = "lungs";
     movementType = "fly";
+    className = "Bird";
   }
 }

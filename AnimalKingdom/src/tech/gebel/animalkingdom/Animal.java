@@ -6,7 +6,7 @@ public abstract class Animal {
   private static int maximumId = 0;
   private static ArrayList<Animal> instances = new ArrayList<Animal>();
   protected int id, yearNamed;
-  protected String name, reproductionType, respirationType, movementType;
+  protected String name, reproductionType, respirationType, movementType, className;
 
   public Animal(int yearNamed, String name) {
     maximumId++;
@@ -104,6 +104,17 @@ public abstract class Animal {
 
     for (Animal animal : instances) if (
       (animal.yearNamed == yearNamed)
+    ) filter.add(animal);
+
+    filter.sort((animal1, animal2) -> animal1.name.compareTo(animal2.name));
+    return filter;
+  }
+
+  public static ArrayList<Animal> sortByNameAndFilterByClass(String className) {
+    ArrayList<Animal> filter = new ArrayList<Animal>();
+
+    for (Animal animal : instances) if (
+      (animal.className.equals(className))
     ) filter.add(animal);
 
     filter.sort((animal1, animal2) -> animal1.name.compareTo(animal2.name));

@@ -21,15 +21,37 @@ public class Main {
     Fish catfish = new Fish(1817, "Catfish");
     Fish perch = new Fish(1758, "Perch");
 
-    System.out.printf("%s%n", Animal.sortByYear(false));
-    System.out.printf("%s%n", Animal.sortByName(true));
-    System.out.printf("%s%n", Animal.sortByMovement(true));
-    System.out.printf("%s%n", Animal.filterByBreath("lungs"));
-    System.out.printf("%s%n", Animal.filterByBreathAndYear("lungs", 1758));
     System.out.printf(
-      "%s%n",
+      "*** MVP ***%n%n*** List all the animals in descending order by year named ***%n%s%n%n",
+      Animal.sortByYear(false)
+    );
+    System.out.printf(
+      "*** List all the animals alphabetically ***%n%s%n%n",
+      Animal.sortByName(true)
+    );
+    System.out.printf(
+      "*** List all the animals order by how they move ***%n%s%n%n",
+      Animal.sortByMovement(true)
+    );
+    System.out.printf(
+      "*** List only those animals the breath with lungs ***%n%s%n%n",
+      Animal.filterByBreath("lungs")
+    );
+    System.out.printf(
+      "*** List only those animals that breath with lungs and were named in 1758 ***%n%s%n%n",
+      Animal.filterByBreathAndYear("lungs", 1758)
+    );
+    System.out.printf(
+      "*** List only those animals that lay eggs and breath with lungs ***%n%s%n%n",
       Animal.filterByBreathAndReproduction("lungs", "eggs")
     );
-    System.out.printf("%s%n", Animal.sortByNameAndFilterByYear(1758));
+    System.out.printf(
+      "*** List alphabetically only those animals that were named in 1758 ***%n%s%n%n",
+      Animal.sortByNameAndFilterByYear(1758)
+    );
+    System.out.printf(
+      "*** Stretch Goal ***%n%n*** For the list of animals, list alphabetically those animals that are mammals ***%n%s%n",
+      Animal.sortByNameAndFilterByClass("Mammal")
+    );
   }
 }

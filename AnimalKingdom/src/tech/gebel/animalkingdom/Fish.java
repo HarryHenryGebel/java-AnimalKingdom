@@ -8,5 +8,6 @@ public class Fish extends Animal {
     reproductionType = "eggs";
     respirationType = "gills";
     movementType = "swim";
+    className = "Fish";
   }
 }
