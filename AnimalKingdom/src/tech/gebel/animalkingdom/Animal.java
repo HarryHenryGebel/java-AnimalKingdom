@@ -40,7 +40,7 @@ public abstract class Animal {
   public static ArrayList<Animal> sortByYear(boolean ascending) {
     ArrayList<Animal> clone = new ArrayList<Animal>(instances);
     if (ascending) clone.sort(
-      (animal1, animal2) -> animal1.yearNamed + animal2.yearNamed
+      (animal1, animal2) -> animal1.yearNamed - animal2.yearNamed
     ); else clone.sort(
       (animal1, animal2) -> animal2.yearNamed - animal1.yearNamed
     );
@@ -96,6 +96,17 @@ public abstract class Animal {
       (animal.respirationType.equals(respirationType)) &&
       (animal.reproductionType.equals(reproductionType))
     ) filter.add(animal);
+    return filter;
+  }
+
+  public static ArrayList<Animal> sortByNameAndFilterByYear(int yearNamed) {
+    ArrayList<Animal> filter = new ArrayList<Animal>();
+
+    for (Animal animal : instances) if (
+      (animal.yearNamed == yearNamed)
+    ) filter.add(animal);
+
+    filter.sort((animal1, animal2) -> animal1.name.compareTo(animal2.name));
     return filter;
   }
 }

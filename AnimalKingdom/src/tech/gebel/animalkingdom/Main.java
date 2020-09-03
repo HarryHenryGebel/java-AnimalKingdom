@@ -25,5 +25,11 @@ public class Main {
     System.out.printf("%s%n", Animal.sortByName(true));
     System.out.printf("%s%n", Animal.sortByMovement(true));
     System.out.printf("%s%n", Animal.filterByBreath("lungs"));
+    System.out.printf("%s%n", Animal.filterByBreathAndYear("lungs", 1758));
+    System.out.printf(
+      "%s%n",
+      Animal.filterByBreathAndReproduction("lungs", "eggs")
+    );
+    System.out.printf("%s%n", Animal.sortByNameAndFilterByYear(1758));
   }
 }
