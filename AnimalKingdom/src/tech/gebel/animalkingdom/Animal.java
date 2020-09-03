@@ -86,5 +86,17 @@ public abstract class Animal {
     ) filter.add(animal);
     return filter;
   }
+
+  public static ArrayList<Animal> filterByBreathAndReproduction(
+    String respirationType,
+    String reproductionType
+  ) {
+    ArrayList<Animal> filter = new ArrayList<Animal>();
+    for (Animal animal : instances) if (
+      (animal.respirationType.equals(respirationType)) &&
+      (animal.reproductionType.equals(reproductionType))
+    ) filter.add(animal);
+    return filter;
+  }
 }
 //  LocalWords:  yearNamed
